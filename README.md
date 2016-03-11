@@ -45,8 +45,7 @@ directory already exists).
 Then make sure you copy the ``_vimrc`` file as ``$HOME/.vimrc`` (a symlink will
 work and prevent you from having to keep two copies up-to-date).
 
-Installing bundles
-++++++++++++++++++
+### Installing bundles
 
 The first thing you need to do is clone ``vim-go`` from GitHub. Because we are
 using ``pathogen`` (already installed), cloning is all we have to do to install
