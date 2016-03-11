@@ -87,6 +87,10 @@ augroup configgroup
     " c/cpp sometimes has braces on the same line, so don't force newlines.
     autocmd FileType c,cpp inoremap { {<CR>}<Esc>O
     autocmd FileType c,cpp inoremap } <Esc>f}a
+    " Turn on spell checking for text, markdown, restructured text files, and
+    " latex files (as well as RTF and README files)
+    autocmd BufEnter *.txt,*.md,*.rst,*.tex,*.rtf,*.markdown,README* setlocal spell
+    autocmd BufEnter *.txt,*.md,*.rst,*.tex,*.rtf,*.markdown,README* setlocal spelllang=en_us
 augroup END
 
 " MiniBufExplorer. Make the list of buffers reside in a vertical split on the
