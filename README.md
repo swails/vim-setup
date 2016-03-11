@@ -45,6 +45,14 @@ directory already exists).
 Then make sure you copy the ``_vimrc`` file as ``$HOME/.vimrc`` (a symlink will
 work and prevent you from having to keep two copies up-to-date).
 
-``YouCompleteMe`` also needs to be installed.  See instructions on their [GitHub
-repository](https://github.com/Valloric/YouCompleteMe) for more detailed
-installation instructions.
+Installing bundles
+~~~~~~~~~~~~~~~~~~
+
+The first thing you need to do is clone ``vim-go`` from GitHub. Because we are
+using ``pathogen`` (already installed), cloning is all we have to do to install
+this plugin (-:
+
+```bash
+cd $HOME/.vim/bundle
+git clone https://github.com/fatih/vim-go.git
+```
