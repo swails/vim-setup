@@ -14,8 +14,7 @@ I use a number of vim extensions, that I list below
 - [vim-go](https://github.com/fatih/vim-go) (``bundle/vim-go``)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
   (``bundle/YouCompleteMe``)
-- [Mini buffer explorer](https://github.com/fholgado/minibufexpl.vim)
-  (``plugin/minibufexpl.vim``)
+- [NERDTree](https://github.com/scrooloose/nerdtree.git) (``bundle/nerdtree``)
 
 Pathogen is used to automatically load everything in ``bundle/`` into the VIM
 runtime.
@@ -57,6 +56,26 @@ this plugin (-:
 cd $HOME/.vim/bundle
 git clone https://github.com/fatih/vim-go.git
 ```
+
+#### nerdtree
+
+Like ``vim-go`` above, NERDTree is very easy to install with pathogen -- just
+clone the repository (-:
+
+```bash
+cd $HOME/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+```
+
+The vimrc file here automatically turns on the file browser in a split to the
+left of the screen, and allows the control sequence Ctrl-n to turn the file
+browser split on and off.
+
+An alternative package (that *only* shows the file buffers, not the whole
+filesystem) is Mini Buffer explorer, which I used before discovering NERDTree.
+You can see portions of my vimrc commented out that utilize that plugin. You can
+download that plugin from https://github.com/fholgado/minibufexpl.vim and clone
+it in the ``bundle`` directory. With NERDTree, it's not particularly necessary.
 
 #### YouCompleteMe
 
