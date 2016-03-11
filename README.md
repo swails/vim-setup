@@ -84,13 +84,14 @@ this, you will need the following packages:
 - nodejs (if you want the ``--tern-completer`` option -- On Ubuntu 14.04 you
   also need the nodejs-legacy package)
 - npm (if you want the ``--tern-completer`` option)
-- xbuild (mono-xbuild, if you want the ``--omnisharp-completer`` optoin)
+- xbuild (mono-xbuild, if you want the ``--omnisharp-completer`` option). I
+  couldn't get this to build on Ubuntu 14.04, though, so I skipped it.
 
 ```bash
 cd $HOME/.vim/bundle
 git clone https://github.com/Valloric/YouCompleteMe.git
 git submodule update --init --recursive
-./install.py --clang-completer --gocode-completer --tern-completer --omnisharp-completer
+./install.py --clang-completer --gocode-completer --tern-completer
 ```
 
 And you're done... phew!
