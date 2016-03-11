@@ -67,9 +67,8 @@ cd $HOME/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 ```
 
-The vimrc file here automatically turns on the file browser in a split to the
-left of the screen, and allows the control sequence Ctrl-n to turn the file
-browser split on and off.
+The vimrc file here allows the control sequence Ctrl-n to create a split to the
+left with a file browser (or turn it off if it's already on).
 
 An alternative package (that *only* shows the file buffers, not the whole
 filesystem) is Mini Buffer explorer, which I used before discovering NERDTree.
@@ -79,7 +78,7 @@ it in the ``bundle`` directory. With NERDTree, it's not particularly necessary.
 
 #### YouCompleteMe
 
-YouCompleteMe is more complicated to install.  It requires Python 2.6 and
+YouCompleteMe is more complicated to install.  It requires Python 2.6 or 2.7 and
 several other prerequisites. [Have a look at the installation
 instructions](https://github.com/Valloric/YouCompleteMe#installation).
 YouCompleteMe uses git submodules, so we need to download those as well. I will
@@ -96,7 +95,7 @@ You can use as many (or as few) of the options as you want. Before you install
 this, you will need the following packages:
 
 - CMake
-- Python 2.6
+- Python 2.6 or 2.7
 - Go 1.4 or later (if you want the ``--gocode-completer`` option)
 - vim with Python support (you may have to rebuild on Mac or other systems where
   this support is optional, like Gentoo)
