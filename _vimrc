@@ -80,9 +80,13 @@ augroup END
 
 " MiniBufExplorer. Make the list of buffers reside in a vertical split on the
 " left that can show up to 40 characters
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplVSplit = 1
-let g:miniBufExplMaxSize = 40
+
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 1
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
+" let g:miniBufExplVSplit = 1
+" let g:miniBufExplMaxSize = 40
+
+" NERDTree setup -- allow it to be toggled via Ctrl-n
+map <C-n> :NERDTreeToggle<CR>

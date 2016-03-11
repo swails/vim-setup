@@ -79,7 +79,7 @@ it in the ``bundle`` directory. With NERDTree, it's not particularly necessary.
 
 #### YouCompleteMe
 
-YouCompleteMe is more complicated to install.  It requires Python 2.7 and
+YouCompleteMe is more complicated to install.  It requires Python 2.6 and
 several other prerequisites. [Have a look at the installation
 instructions](https://github.com/Valloric/YouCompleteMe#installation).
 YouCompleteMe uses git submodules, so we need to download those as well. I will
@@ -96,7 +96,7 @@ You can use as many (or as few) of the options as you want. Before you install
 this, you will need the following packages:
 
 - CMake
-- Python 2.7
+- Python 2.6
 - Go 1.4 or later (if you want the ``--gocode-completer`` option)
 - vim with Python support (you may have to rebuild on Mac or other systems where
   this support is optional, like Gentoo)
