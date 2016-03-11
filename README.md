@@ -47,6 +47,8 @@ work and prevent you from having to keep two copies up-to-date).
 
 ### Installing bundles
 
+#### vim-go
+
 The first thing you need to do is clone ``vim-go`` from GitHub. Because we are
 using ``pathogen`` (already installed), cloning is all we have to do to install
 this plugin (-:
@@ -55,3 +57,40 @@ this plugin (-:
 cd $HOME/.vim/bundle
 git clone https://github.com/fatih/vim-go.git
 ```
+
+#### YouCompleteMe
+
+YouCompleteMe is more complicated to install.  It requires Python 2.7 and
+several other prerequisites. [Have a look at the installation
+instructions](https://github.com/Valloric/YouCompleteMe#installation).
+YouCompleteMe uses git submodules, so we need to download those as well. I will
+also install with as many bells and whistles as I can via the following flags:
+
+- ``--clang-completer`` -- Enables C/C++ completion by integrating with clang
+- ``--gocode-completer`` -- Enables Go copmletion by integrating with an
+  installed version of Go (note, you need to have Go installed and set up on
+  your system for this)
+- ``--tern-completer`` -- Enables Javascript completion
+- ``--omnisharp-completer`` -- Enables C# completion
+
+You can use as many (or as few) of the options as you want. Before you install
+this, you will need the following packages:
+
+- CMake
+- Python 2.7
+- Go 1.4 or later (if you want the ``--gocode-completer`` option)
+- vim with Python support (you may have to rebuild on Mac or other systems where
+  this support is optional, like Gentoo)
+- nodejs (if you want the ``--tern-completer`` option -- On Ubuntu 14.04 you
+  also need the nodejs-legacy package)
+- npm (if you want the ``--tern-completer`` option)
+- xbuild (mono-xbuild, if you want the ``--omnisharp-completer`` optoin)
+
+```bash
+cd $HOME/.vim/bundle
+git clone https://github.com/Valloric/YouCompleteMe.git
+git submodule update --init --recursive
+./install.py --clang-completer --gocode-completer --tern-completer --omnisharp-completer
+```
+
+And you're done... phew!
