@@ -75,15 +75,15 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal softtabstop=2
     " Don't strip from Go code, since vim-go already does that automatically
     " by invoking gofmt
-    autocmd FileType c,cpp,python,ruby,java,markdown,Makefile,bash,csh,php autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+    autocmd FileType c,cpp,python,ruby,java,markdown,Makefile,bash,csh,php,swift autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
     " Auto-close braces and parentheses, but *only* in source code (and since
     " some languages don't use braces, don't close braces)
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go inoremap ( ()<Esc>i
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go inoremap ) <Esc>f)a
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go inoremap [ []<Esc>i
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go inoremap ] <Esc>f]a
-    autocmd FileType java,bash,csh,php,go inoremap { {<CR>}<Esc>O
-    autocmd FileType java,bash,csh,php,go inoremap } <Esc>/}<CR>:nohlsearch<CR>a
+    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ( ()<Esc>i
+    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ) <Esc>f)a
+    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap [ []<Esc>i
+    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ] <Esc>f]a
+    autocmd FileType java,bash,csh,php,go,swift inoremap { {<CR>}<Esc>O
+    autocmd FileType java,bash,csh,php,go,swift inoremap } <Esc>/}<CR>:nohlsearch<CR>a
     " c/cpp sometimes has braces on the same line, so don't force newlines.
     autocmd FileType c,cpp inoremap { {<CR>}<Esc>O
     autocmd FileType c,cpp inoremap } <Esc>f}a
