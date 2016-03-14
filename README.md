@@ -15,6 +15,7 @@ I use a number of vim extensions, that I list below
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
   (``bundle/YouCompleteMe``)
 - [NERDTree](https://github.com/scrooloose/nerdtree.git) (``bundle/nerdtree``)
+- [swift.vim](https://github.com/keith/swift.vim.git) (``bundle/vim-swift``)
 
 Pathogen is used to automatically load everything in ``bundle/`` into the VIM
 runtime.
@@ -27,6 +28,12 @@ YouCompleteMe adds sophisticated autocompletion for various languages.
 Mini buffer explorer adds a split with a hidden buffer containing the list of
 all active buffers in a clickable and easy-to-view manner. This is much better
 than using tabs in my limited experience.
+
+NERDTree is an optional file browser that can be added to a vertical split (to
+the left of the buffer editor).
+
+swift.vim is a SWIFT plugin for VIM, and enable syntax highlighting and proper
+indentation.
 
 Getting started
 ---------------
@@ -48,14 +55,28 @@ work and prevent you from having to keep two copies up-to-date).
 
 #### vim-go
 
-The first thing you need to do is clone ``vim-go`` from GitHub. Because we are
-using ``pathogen`` (already installed), cloning is all we have to do to install
-this plugin (-:
+The first thing you need to do is clone ``vim-go`` from GitHub (if you plan on
+ever viewing or editing Go code). Because we are using ``pathogen`` (already
+installed), cloning is all we have to do to install this plugin (-:
 
 ```bash
 cd $HOME/.vim/bundle
 git clone https://github.com/fatih/vim-go.git
 ```
+
+#### swift.vim
+
+The next thing you need to do is clone ``swift.vim`` from GitHub (if you plan on
+ever viewing or editing Swift code). Because we are using ``pathogen`` (already
+installed), cloning is all we have to do to install this plugin (-:
+
+```bash
+cd $HOME/.vim/bundle
+git clone https://github.com/keith/swift.vim vim-swift
+```
+
+Note the directory rename is done to remain consistent with the ``vim-go``
+plugin we installed above.
 
 #### nerdtree
 
