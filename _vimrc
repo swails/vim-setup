@@ -78,15 +78,15 @@ augroup configgroup
     autocmd FileType c,cpp,python,ruby,java,markdown,Makefile,bash,csh,php,swift autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
     " Auto-close braces and parentheses, but *only* in source code (and since
     " some languages don't use braces, don't close braces)
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ( ()<Esc>i
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ) <Esc>f)a
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap [ []<Esc>i
-    autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ] <Esc>f]a
-    autocmd FileType java,bash,csh,php,go,swift inoremap { {<CR>}<Esc>O
-    autocmd FileType java,bash,csh,php,go,swift inoremap } <Esc>/}<CR>:nohlsearch<CR>a
-    " c/cpp sometimes has braces on the same line, so don't force newlines.
-    autocmd FileType c,cpp inoremap { {<CR>}<Esc>O
-    autocmd FileType c,cpp inoremap } <Esc>f}a
+"   autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ( ()<Esc>i
+"   autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ) <Esc>f)a
+"   autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap [ []<Esc>i
+"   autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ] <Esc>f]a
+"   autocmd FileType java,bash,csh,php,go,swift inoremap { {<CR>}<Esc>O
+"   autocmd FileType java,bash,csh,php,go,swift inoremap } <Esc>/}<CR>:nohlsearch<CR>a
+"   " c/cpp sometimes has braces on the same line, so don't force newlines.
+"   autocmd FileType c,cpp inoremap { {<CR>}<Esc>O
+"   autocmd FileType c,cpp inoremap } <Esc>f}a
     " Turn on spell checking for text, markdown, restructured text files, and
     " latex files (as well as RTF and README files)
     autocmd BufEnter *.txt,*.md,*.rst,*.tex,*.rtf,*.markdown,README* setlocal spell
