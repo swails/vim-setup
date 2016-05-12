@@ -54,11 +54,9 @@ augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
     autocmd FileType java setlocal noexpandtab
-    autocmd FileType java setlocal list
     autocmd FileType java setlocal listchars=tab:+\ ,eol:-
     autocmd FileType java setlocal formatprg=par\ -w80\ -T4
     autocmd FileType php setlocal expandtab
-    autocmd FileType php setlocal list
     autocmd FileType php setlocal listchars=tab:+\ ,eol:-
     autocmd FileType php setlocal formatprg=par\ -w80\ -T4
     autocmd FileType ruby setlocal tabstop=2
@@ -67,6 +65,10 @@ augroup configgroup
     autocmd FileType ruby setlocal commentstring=#\ %s
     autocmd FileType python setlocal commentstring=#\ %s
     autocmd FileType go setlocal noexpandtab
+    autocmd FileType go setlocal tabstop=3
+    autocmd FileType go setlocal shiftwidth=3
+    autocmd FileType go setlocal softtabstop=3
+    autocmd FileType go setlocal tw=120
     autocmd BufEnter *.cls setlocal filetype=java
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
@@ -76,6 +78,8 @@ augroup configgroup
     " Don't strip from Go code, since vim-go already does that automatically
     " by invoking gofmt
     autocmd FileType c,cpp,python,ruby,java,markdown,Makefile,bash,csh,php,swift autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+    " Work around a slow editor with Ruby. See http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+    autocmd FileType ruby setlocal re=1
     " Auto-close braces and parentheses, but *only* in source code (and since
     " some languages don't use braces, don't close braces)
 "   autocmd FileType c,cpp,python,ruby,java,Makefile,bash,csh,php,go,swift inoremap ( ()<Esc>i
