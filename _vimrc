@@ -113,3 +113,8 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 30
 " Automatically start NERDTree on startup
 " autocmd VimEnter * NERDTree
+
+" setup for vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/keith/swift.vim'
+call plug#end()
